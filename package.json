@@ -1,0 +1,22 @@
+{
+	"author": "David Goehrig",
+	"name": "opifex.nova",
+	"license" : "MIT",
+	"description": "Manages OpenStack Nova via AMP",
+	"version": "0.0.1",
+	"repository": {
+		"url": "http://github.com/cthulhuology/opifex.nova"
+	},
+	"main": "./lib/Opifex.Nova.coffee",
+	"bin": {},
+	"dependencies": {
+		"opifex" : ">=0.0.6",
+		"pkgcloud" : ">=0.8.14"
+	},
+	"devDependencies": {},
+	"optionalDependencies": {},
+	"engines": {
+		"node": ">=0.10.15"
+	}
+}
+
