@@ -11,6 +11,7 @@ console.log config
 Nova = () ->
 	self = this
 	self.client = cloud.providers.rackspace.compute.createClient config
+	self.servers = []
 	self["list.flavors"] = () ->
 		self.client.getFlavors (error, flavors) ->
 			if error
