@@ -16,7 +16,7 @@
 	"devDependencies": {},
 	"optionalDependencies": {},
 	"engines": {
-		"node": ">=0.10.15"
+		"node": ">=0.10.3"
 	}
 }
 
