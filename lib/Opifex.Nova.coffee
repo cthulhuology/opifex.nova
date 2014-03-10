@@ -6,9 +6,11 @@
 cloud = require 'pkgcloud'
 config = require "#{process.env.HOME}/.nova.coffee"
 
+console.log config
+
 Nova = () ->
 	self = this
-	self.client = cloud.providers.rackspace.compute.createClient { username: config.username, apiKey: config.api.key }
+	self.client = cloud.providers.rackspace.compute.createClient config
 	self["list.flavors"] = () ->
 		self.client.getFlavors (error, flavors) ->
 			if error
