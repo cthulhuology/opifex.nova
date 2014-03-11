@@ -51,8 +51,8 @@ Nova = () ->
 				image: x.imageId
 				flavor: x.flavorId
 				host: x.hostId
-				public:  (x.addresses.public.filter (y) -> y.version == 4)[0].addr
-				private:  (x.addresses.private.filter (y) -> y.version == 4)[0].addr
+				public:  (x.addresses?.public?.filter (y) -> y.version == 4)?[0]?.addr
+				private:  (x.addresses?.private?.filter (y) -> y.version == 4)?[0]?.addr
 			self.send [ 'nova', 'list.servers', self.servers ]
 	self["create.server"] = (name,image,flavor) ->
 		self.client.createServer {
